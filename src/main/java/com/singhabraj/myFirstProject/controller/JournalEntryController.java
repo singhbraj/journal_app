@@ -5,6 +5,8 @@ import com.singhabraj.myFirstProject.entity.User;
 import com.singhabraj.myFirstProject.service.JournalEntityService;
 import com.singhabraj.myFirstProject.service.UserService;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +27,7 @@ public class JournalEntryController {
 
     @Autowired
     private UserService userService;
+
 
     @GetMapping
     public ResponseEntity<?> getAllJournalEntriesOfUser() {
